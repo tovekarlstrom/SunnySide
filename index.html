@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunnySide Vädret nära dig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="img/icon10.png" alt="SunnySide, vädret nära dig logo" />
+        </a>
+      </nav>
+      <div id="background-pic">
+        <div id="slogan-div">
+          <div id="time-box">
+            <div id="time" onload="currentTime()">klockan</div>
+          </div>
+          <div id="text-box">
+            <div id="sliding-box">
+              <div id="sliding-text">
+                <div id="text-1">CLOUDS</div>
+                <div id="text-2">RAIN</div>
+                <div id="text-3">SUN</div>
+              </div>
+              <h1>We have it all</h1>
+            </div>
+            <p id="description">
+              SunnySide is the weather forecast near you. We hope for good
+              weather at least somewhere in the world
+            </p>
+          </div>
+        </div>
+
+        <div id="input-holder">
+          <input
+            id="search-bar"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+          <input type="button" value="Search" id="navigation-button" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div id="start-weather-boxes">
+          <div id="weather-stockholm" class="box">
+            <h2 id="city-name-stockholm">Stockholm</h2>
+            <div id="weather-data-stockholm">
+              <div id="wind-cloud-data-stockholm">
+                <div id="wind-stockholm"></div>
+                <div id="clouds-stockholm"></div>
+              </div>
+              <div id="temperature-stockholm"></div>
+              <div>
+                <div class="icon-box">
+                  <img id="icon-stockholm" alt="Weather icon" />
+                </div>
+                <div id="weather-decription-stockholm"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="weather-copenhagen" class="box">
+            <h2 id="city-name-copenhagen">Copenhagen</h2>
+            <div id="weather-data-copenhagen">
+              <div id="wind-cloud-data-copenhagen">
+                <div id="wind-copenhagen"></div>
+                <div id="clouds-copenhagen"></div>
+              </div>
+              <div id="temperature-copenhagen"></div>
+              <div>
+                <div class="icon-box">
+                  <img id="icon-copenhagen" alt="Weather icon" />
+                </div>
+                <div id="weather-decription-copenhagen"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="weather-oslo" class="box">
+            <h2 id="city-name-oslo">Oslo</h2>
+            <div id="weather-data-oslo">
+              <div id="wind-cloud-data-oslo">
+                <div id="wind-oslo"></div>
+                <div id="clouds-oslo"></div>
+              </div>
+              <div id="temperature-oslo"></div>
+              <div>
+                <div class="icon-box">
+                  <img id="icon-oslo" alt="Weather icon" />
+                </div>
+                <div id="weather-decription-oslo"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="weather-helsinki" class="box">
+            <h2 id="city-name-helsinki">Helsinki</h2>
+            <div id="weather-data-helsinki">
+              <div id="wind-cloud-data-helsinki">
+                <div id="wind-helsinki"></div>
+                <div id="clouds-helsinki"></div>
+              </div>
+              <div id="temperature-helsinki"></div>
+              <div>
+                <div class="icon-box">
+                  <img id="icon-helsinki" alt="Weather icon" />
+                </div>
+                <div id="weather-decription-helsinki"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <h2>SunnySide</h2>
+        <p>Contact: contact@sunnyside.coX</p>
+        <p>©ToveKarlström</p>
+      </div>
+    </footer>
+    <script src="general.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

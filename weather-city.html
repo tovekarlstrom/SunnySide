@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SunnySide Vädret nära dig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="general.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="weather-city.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="img/icon10.png" alt="SunnySide, vädret nära dig logo" />
+        </a>
+        <div></div>
+      </nav>
+      <div id="slogan-div">
+        <div id="time-box">
+          <div id="time" onload="currentTime()">klockan</div>
+        </div>
+        <div id="text-box">
+          <div id="sliding-box">
+            <div id="sliding-text">
+              <div id="text-1">CLOUDS</div>
+              <div id="text-2">RAIN</div>
+              <div id="text-3">SUN</div>
+            </div>
+            <h1>We have it all</h1>
+          </div>
+          <p id="description">
+            SunnySide is the weather forecast near you. We hope for good weather
+            at least somewhere in the world
+          </p>
+        </div>
+      </div>
+
+      <div id="input-holder">
+        <input id="search-bar" type="text" name="search" placeholder="Search" />
+        <input type="submit" value="Search" id="navigation-button" />
+      </div>
+    </header>
+    <main>
+      <section id="background-section">
+        <div id="weather-city-information">
+          <div id="city-time">
+            <h2 id="city"></h2>
+          </div>
+          <div id="temperature-img">
+            <img src="img/temp-white.png" alt="termometer" />
+            <p id="temperature"></p>
+            <i id="arrow" class="bi bi-caret-down"></i>
+          </div>
+          <div id="icon-weather">
+            <div id="icon-box"><img id="icon" alt="Weather icon" /></div>
+            <div id="weather-decription"></div>
+          </div>
+          <div id="wind-img">
+            <img src="img/wind.png" alt="wind illustration" />
+            <p id="wind"></p>
+          </div>
+          <div id="clouds-img">
+            <img src="img/cloud-white.png" alt="cloud illustration" />
+            <p id="clouds"></p>
+          </div>
+        </div>
+        <div id="arrow-box">
+          <p id="feels-like"></p>
+          <p id="max-temp"></p>
+          <p id="min-temp"></p>
+        </div>
+      </section>
+
+      <div id="forecast-introduction">
+        <div id="button-forecast">
+          <div id="weather-forecast-container">
+            <div id="weather-forecast"></div>
+          </div>
+          <p id="drop-down-weather">
+            5 DAYS FORECAST<i id="arrow-forecast" class="bi bi-caret-up"></i>
+          </p>
+        </div>
+
+        <div id="forecast-introduction-text">
+          <h2>Weather in the future?</h2>
+          <p>
+            We provide a forecast for 5 days ahead for those who want to look
+            into the future. In the forecast, you can see the time, temperature
+            and weather description. Click the button and look for yourself!
+          </p>
+        </div>
+      </div>
+
+      <div id="aqi-information">
+        <p id="aqi-index"></p>
+        <p id="aqi-info-category"></p>
+      </div>
+
+      <div id="aqi-facts">
+        <section>
+          <h2>Air Quality Index</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Qualitative names</th>
+                <th>Index</th>
+                <th>NO<sub>2</sub></th>
+                <th>PM<sub>10</sub></th>
+                <th>O<sub>3</sub></th>
+                <th>PM<sub>2.5</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Good</td>
+                <td>1</td>
+                <td>0-50</td>
+                <td>0-25</td>
+                <td>0-60</td>
+                <td>0-15</td>
+              </tr>
+              <tr>
+                <td>Fair</td>
+                <td>2</td>
+                <td>50-100</td>
+                <td>25-50</td>
+                <td>60-120</td>
+                <td>15-30</td>
+              </tr>
+              <tr>
+                <td>Moderate</td>
+                <td>3</td>
+                <td>100-200</td>
+                <td>50-90</td>
+                <td>120-180</td>
+                <td>30-55</td>
+              </tr>
+              <tr>
+                <td>Poor</td>
+                <td>4</td>
+                <td>200-400</td>
+                <td>90-180</td>
+                <td>180-240</td>
+                <td>55-110</td>
+              </tr>
+              <tr>
+                <td>Very Poor</td>
+                <td>5</td>
+                <td>>400</td>
+                <td>>180</td>
+                <td>>240</td>
+                <td>>110</td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="white-background-box"></div>
+        </section>
+        <div id="myChartDiv">
+          <canvas id="myChart" width="400" height="400"></canvas>
+        </div>
+      </div>
+
+      <div id="aqi-explination" class="box show">
+        <h3>Air Quality Index</h3>
+        <p>
+          We show the range of the AQI from 1 to 5. The higher the AQI value,
+          the greater the level of air pollution and the greater the health
+          concern. For example, an AQI value of 1 it represents good air
+          quality, while an AQI value of 5 have unhealthy air quality. You can
+          easily hover the graph to see the specifik measurement value.
+        </p>
+      </div>
+
+      <div id="latest-search">
+        <p>Latest search</p>
+        <div id="latest-search-city-name"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <h2>SunnySide</h2>
+        <p>Contact: contact@sunnyside.coX</p>
+        <p>©ToveKarlström</p>
+      </div>
+    </footer>
+
+    <script src="general.js"></script>
+    <script src="weather-city.js"></script>
+  </body>
+</html>

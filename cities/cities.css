@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+#information-box {
+  display: none;
+  background-color: aqua;
+  width: 500px;
+  height: 100px;
+  font-size: 1em;
+  align-items: center;
+  border-radius: 10px;
+}
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  background-image: url(street.jpg);
+  background-color: #222;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 700px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  color: #c792bf;
+  font-size: 3em;
+  font-family: "Cormorant Garamond", serif;
+}
+#web-description > p {
+  color: #c792bf;
+  font-size: 2em;
+  font-family: "Cormorant Garamond", serif;
+}
+
+form {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#radiobuttons {
+  background-color: aliceblue;
+  width: 500px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#add-city,
+#change-city,
+#delite-city {
+  margin-left: 30px;
+}
+
+#text-input {
+  background-color: aliceblue;
+  width: 600px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+#info-icon:hover {
+  color: #b974af;
+}
+
+#info-icon-box {
+  background-color: aliceblue;
+  width: 600px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 10px;
+}
+
+.div-container {
+  background-color: #c792bf;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}

@@ -1,0 +1,93 @@
+/* annimation slid */
+/* https://www.youtube.com/watch?v=rK9nDoaswRU&ab_channel=RedStapler */
+
+#start-weather-boxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 200px;
+}
+
+#weather-stockholm,
+#weather-copenhagen,
+#weather-oslo,
+#weather-helsinki {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 500px;
+  color: #eee;
+  padding: 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.box {
+  background-color: green;
+  margin: 20px;
+  transform: translateX(400%);
+  transition: transform 0.6s ease;
+}
+
+.box:nth-last-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
+
+#weather-data-copenhagen,
+#weather-data-stockholm,
+#weather-data-oslo,
+#weather-data-helsinki {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#wind-cloud-data-stockholm,
+#wind-cloud-data-copenhagen,
+#wind-cloud-data-oslo,
+#wind-cloud-data-helsinki {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  padding: 10px 0px;
+}
+
+#temperature-stockholm,
+#temperature-copenhagen,
+#temperature-oslo,
+#temperature-helsinki {
+  font-size: 3rem;
+}
+
+#icon-stockholm,
+#icon-copenhagen,
+#icon-oslo,
+#icon-helsinki {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+#city-name-stockholm,
+#city-name-copenhagen,
+#city-name-oslo,
+#city-name-helsinki {
+  border: 0px;
+  border-bottom: 2px;
+  border-style: solid;
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#weather-decription-stockholm,
+#weather-decription-copenhagen,
+#weather-decription-oslo,
+#weather-decription-helsinki {
+  width: 150px;
+}
